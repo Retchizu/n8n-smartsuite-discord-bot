@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",  // Outputs compiled files to the dist folder
+    "rootDir": "./src",  // Your source files will be in the src folder
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],  // Your source files
+  "compileOnSave": true // Optionally enables file saving with compilation
+}
