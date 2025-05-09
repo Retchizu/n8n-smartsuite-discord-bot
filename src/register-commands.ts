@@ -7,9 +7,9 @@ const commands = [
   {
     name: "get-records",
     description: "Get records matching the title",
-    options:[
+    options: [
       {
-        name:"title",
+        name: "title",
         description: "title of the record",
         type: ApplicationCommandOptionType.String,
         required: true
@@ -17,15 +17,33 @@ const commands = [
     ]
   },
   {
-    name:"add-record",
-    description: "add a Record",
+    name: "create-record",
+    description: "create a Record",
     options: [
       {
-        name:"title",
-        description: "title of the record",
+        name: "title",
+        description: "title of record",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
+      {
+        name: "description",
+        description: "description of record",
+        type: ApplicationCommandOptionType.String,
+        required: true,
+      },
+      {
+        name: "assigned_to",
+        description: "assign record to user",
+        type: ApplicationCommandOptionType.String,
+        required: true
+      },
+      {
+        name: "status",
+        description: "set record status",
+        type: ApplicationCommandOptionType.String,
+        required: false
+      }
     ]
   }
 ];

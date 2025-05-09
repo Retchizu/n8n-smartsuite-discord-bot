@@ -15,15 +15,33 @@ const commands = [
         ]
     },
     {
-        name: "add-record",
-        description: "add a Record",
+        name: "create-record",
+        description: "create a Record",
         options: [
             {
                 name: "title",
-                description: "title of the record",
+                description: "title of record",
                 type: ApplicationCommandOptionType.String,
                 required: true,
             },
+            {
+                name: "description",
+                description: "description of record",
+                type: ApplicationCommandOptionType.String,
+                required: true,
+            },
+            {
+                name: "assigned_to",
+                description: "assign record to user",
+                type: ApplicationCommandOptionType.String,
+                required: true
+            },
+            {
+                name: "status",
+                description: "set record status",
+                type: ApplicationCommandOptionType.String,
+                required: false
+            }
         ]
     }
 ];

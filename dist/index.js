@@ -1,6 +1,7 @@
 import { Client, IntentsBitField } from "discord.js";
 import dotenv from "dotenv";
 import { getRecords } from "./command-methods/getRecords.js";
+import { createRecord } from "./command-methods/createRecord.js";
 dotenv.config();
 const client = new Client({
     intents: [
@@ -20,6 +21,9 @@ client.on("interactionCreate", async (interaction) => {
     switch (commandName) {
         case "get-records":
             getRecords(options, interaction, commandName);
+            break;
+        case "create-record":
+            createRecord(options, interaction, commandName);
             break;
         default: break;
     }
